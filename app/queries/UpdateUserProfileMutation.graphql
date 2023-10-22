@@ -1,0 +1,11 @@
+mutation UpdateUserProfileMutation($input: UpdateUserProfileInput!) {
+  payload: updateUserProfile(input: $input) {
+    errors {
+      field
+      message
+    }
+    user {
+      id
+    }
+  }
+}

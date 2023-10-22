@@ -1,0 +1,25 @@
+.target {
+  --badge-dot-size: calc(var(--badge-height) / 2.7);
+
+  cursor: pointer;
+  padding-left: var(--badge-padding-x-sm);
+
+  border-color: var(--mantine-color-gray-4);
+  &[data-expanded] {
+    border-color: var(--mantine-color-brand-outline);
+  }
+}
+
+.icon {
+  --icon-color: var(--badge-color, var(--mantine-color-white));
+
+  height: rem(20px);
+  width: rem(20px);
+  svg {
+    path,
+    g {
+      fill: var(--icon-color) !important;
+      stroke: var(--icon-color) !important;
+    }
+  }
+}

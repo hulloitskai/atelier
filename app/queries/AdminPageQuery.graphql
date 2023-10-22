@@ -1,0 +1,6 @@
+query AdminPageQuery {
+  viewer {
+    ...AppViewerFragment
+    id
+  }
+}

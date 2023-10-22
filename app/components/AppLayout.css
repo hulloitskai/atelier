@@ -1,0 +1,13 @@
+body {
+  --mantine-color-body: #f4f1e9;
+  text-transform: lowercase;
+  button {
+    text-transform: lowercase;
+  }
+  pre {
+    text-transform: none;
+  }
+  .mantine-Badge-label {
+    text-transform: lowercase;
+  }
+}

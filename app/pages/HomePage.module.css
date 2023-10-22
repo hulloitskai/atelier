@@ -1,0 +1,8 @@
+.root {
+  :global(.mantine-Container-root) {
+    @media (max-width: $mantine-breakpoint-sm) {
+      padding-left: var(--mantine-spacing-xl);
+      padding-right: var(--mantine-spacing-xl);
+    }
+  }
+}
