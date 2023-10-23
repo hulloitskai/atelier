@@ -115,12 +115,11 @@ const AppLayout: FC<AppLayoutProps> = ({
             variant="subtle"
             size="compact-md"
             color="var(--mantine-color-black)"
-            radius="md"
             h="unset"
             py={4}
             px={6}
             fw={700}
-            fz="md"
+            fz="lg"
           >
             Atelier
           </Button>

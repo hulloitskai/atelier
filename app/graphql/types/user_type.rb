@@ -9,7 +9,7 @@ module Types
     # == Fields
     field :avatar, ImageType, method: :avatar_blob
     field :email, String, null: false
-    field :is_owner, Boolean, null: false, method: :owner?
+    field :is_admin, Boolean, null: false, method: :admin?
     field :name, String, null: false
     field :unverified_email, String, method: :unconfirmed_email
 

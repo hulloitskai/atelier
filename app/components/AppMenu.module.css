@@ -6,8 +6,12 @@
 
   border-color: var(--mantine-color-gray-4);
   &[data-expanded] {
-    border-color: var(--mantine-color-brand-outline);
+    border-color: var(--mantine-color-primary-outline);
   }
+}
+
+.dropdown {
+  --am-dropdown-border-color: var(--mantine-color-primary-2);
 }
 
 .icon {

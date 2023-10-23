@@ -49,7 +49,7 @@ const AppMenu: FC<AppMenuProps> = ({ viewer, style, ...otherProps }) => {
 
   // == Query
   const onError = useApolloAlertCallback("Failed to load server info");
-  const skipQuery = !viewer?.isOwner || !opened;
+  const skipQuery = !viewer?.isAdmin || !opened;
   const { data } = useQuery(AppMenuQueryDocument, {
     skip: skipQuery,
     onError,
@@ -64,12 +64,16 @@ const AppMenu: FC<AppMenuProps> = ({ viewer, style, ...otherProps }) => {
       offset={4}
       width={220}
       withinPortal={false}
-      shadow="sm"
       onChange={setOpened}
+      classNames={{ dropdown: classes.dropdown }}
       styles={{
         dropdown: {
           padding: 0,
           overflow: "hidden",
+          border: `${rem(1)} solid var(--am-dropdown-border-color)`,
+        },
+        divider: {
+          borderColor: "var(--am-dropdown-border-color)",
         },
         item: {
           padding: `${rem(8)} ${rem(10)}`,
@@ -78,10 +82,10 @@ const AppMenu: FC<AppMenuProps> = ({ viewer, style, ...otherProps }) => {
         itemSection: {
           width: 16,
           height: 16,
-          color: "var(--mantine-primary-color-filled)",
+          color: "var(--mantine-color-primary-filled)",
         },
         itemLabel: {
-          color: "var(--mantine-color-gray-filled)",
+          color: "var(--mantine-color-gray-7)",
           fontWeight: 500,
         },
       }}
@@ -101,7 +105,7 @@ const AppMenu: FC<AppMenuProps> = ({ viewer, style, ...otherProps }) => {
             />
           }
           className={classes.target}
-          color="gray"
+          color="dark"
           style={[
             style,
             {

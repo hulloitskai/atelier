@@ -76,12 +76,12 @@ export type UpdateUserProfilePayloadFieldPolicy = {
 	success?: FieldPolicy<any> | FieldReadFunction<any>,
 	user?: FieldPolicy<any> | FieldReadFunction<any>
 };
-export type UserKeySpecifier = ('avatar' | 'email' | 'id' | 'isOwner' | 'name' | 'unverifiedEmail' | UserKeySpecifier)[];
+export type UserKeySpecifier = ('avatar' | 'email' | 'id' | 'isAdmin' | 'name' | 'unverifiedEmail' | UserKeySpecifier)[];
 export type UserFieldPolicy = {
 	avatar?: FieldPolicy<any> | FieldReadFunction<any>,
 	email?: FieldPolicy<any> | FieldReadFunction<any>,
 	id?: FieldPolicy<any> | FieldReadFunction<any>,
-	isOwner?: FieldPolicy<any> | FieldReadFunction<any>,
+	isAdmin?: FieldPolicy<any> | FieldReadFunction<any>,
 	name?: FieldPolicy<any> | FieldReadFunction<any>,
 	unverifiedEmail?: FieldPolicy<any> | FieldReadFunction<any>
 };

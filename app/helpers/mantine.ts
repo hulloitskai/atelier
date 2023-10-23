@@ -2,6 +2,7 @@ import {
   ActionIcon,
   Alert,
   Anchor,
+  Badge,
   Button,
   DEFAULT_THEME,
   Loader,
@@ -22,7 +23,7 @@ import type { DefaultMantineColor, MantineColorsTuple } from "@mantine/core";
 import cx from "clsx";
 import classes from "./mantine.module.css";
 
-export type CustomColors = "brand" | DefaultMantineColor;
+export type CustomColors = "primary" | DefaultMantineColor;
 
 declare module "@mantine/core" {
   export interface MantineThemeColorsOverride {
@@ -42,9 +43,44 @@ const BASE_THEME_OVERRIDE = createTheme({
       "Inter, Helvetica, -apple-system, BlinkMacSystemFont, sans-serif",
   },
   colors: {
-    brand: DEFAULT_THEME.colors.indigo,
+    primary: [
+      "#eaf3ff",
+      "#d8e3f8",
+      "#b1c5ea",
+      "#87a4dc",
+      "#6489d1",
+      "#4d78ca",
+      "#406fc8",
+      "#315eb1",
+      "#28539f",
+      "#19488e",
+    ],
+    secondary: [
+      "#f4edff",
+      "#e4d9f6",
+      "#c5aeea",
+      "#a683df",
+      "#8a5dd5",
+      "#7946cf",
+      "#7139cd",
+      "#602cb6",
+      "#5526a3",
+      "#491f91",
+    ],
+    accent: [
+      "#ffecf2",
+      "#f7d8e1",
+      "#ecadc1",
+      "#e2819e",
+      "#d95c80",
+      "#d4446e",
+      "#d23765",
+      "#bb2954",
+      "#a7224b",
+      "#931640",
+    ],
   },
-  primaryColor: "brand",
+  primaryColor: "primary",
   fontFamily: "Hahmlet, 'Times New Roman', Times, serif",
   // fontFamily:
   //   "Manrope, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, " +
@@ -67,7 +103,8 @@ const BASE_THEME_OVERRIDE = createTheme({
     }),
     Alert: Alert.extend({
       defaultProps: {
-        radius: "md",
+        radius: "xs",
+        // radius: "md",
       },
       styles: {
         title: {
@@ -75,28 +112,31 @@ const BASE_THEME_OVERRIDE = createTheme({
         },
       },
     }),
+    Badge: Badge.extend({
+      defaultProps: {
+        radius: "xs",
+      },
+    }),
     Button: Button.extend({
       defaultProps: {
-        variant: "outline",
-        radius: "md",
+        radius: "xs",
+        // shadow: "sm",
       },
       classNames: {
         root: classes.button,
-      },
-      styles: {
-        label: {
-          fontWeight: 700,
-        },
+        label: classes.buttonLabel,
       },
     }),
     Card: Card.extend({
       defaultProps: {
-        radius: "md",
+        radius: "xs",
+        shadow: "sm",
+        // radius: "md",
       },
     }),
     Loader: Loader.extend({
       defaultProps: {
-        color: "brand.5",
+        color: "primary.5",
       },
     }),
     LoadingOverlay: LoadingOverlay.extend({
@@ -108,7 +148,9 @@ const BASE_THEME_OVERRIDE = createTheme({
     }),
     Menu: Menu.extend({
       defaultProps: {
-        radius: "md",
+        radius: "xs",
+        shadow: "sm",
+        // radius: "md",
       },
     }),
     Modal: Modal.extend({
@@ -121,22 +163,26 @@ const BASE_THEME_OVERRIDE = createTheme({
     }),
     NumberInput: NumberInput.extend({
       defaultProps: {
-        radius: "md",
+        radius: "xs",
+        // radius: "md",
       },
     }),
     PasswordInput: PasswordInput.extend({
       defaultProps: {
-        radius: "md",
+        radius: "xs",
+        // radius: "md",
       },
     }),
     Textarea: Textarea.extend({
       defaultProps: {
-        radius: "md",
+        radius: "xs",
+        // radius: "md",
       },
     }),
     TextInput: TextInput.extend({
       defaultProps: {
-        radius: "md",
+        radius: "xs",
+        // radius: "md",
       },
     }),
     ThemeIcon: ThemeIcon.extend({

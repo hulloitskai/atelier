@@ -223,7 +223,7 @@ export type User = Node & {
   email: Scalars['String']['output'];
   /** ID of the object. */
   id: Scalars['ID']['output'];
-  isOwner: Scalars['Boolean']['output'];
+  isAdmin: Scalars['Boolean']['output'];
   name: Scalars['String']['output'];
   unverifiedEmail?: Maybe<Scalars['String']['output']>;
 };

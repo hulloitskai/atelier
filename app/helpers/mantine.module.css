@@ -2,6 +2,17 @@
   --_disabled-bg: var(--mantine-color-dark-7);
 }
 
+.button:not(:disabled) {
+  &:not([data-variant]),
+  &[data-variant="filled"] {
+    box-shadow: var(--mantine-shadow-sm);
+  }
+}
+
+.buttonLabel {
+  font-weight: 700;
+}
+
 .emailText {
   --text-color: var(--mantine-color-gray-8);
 }

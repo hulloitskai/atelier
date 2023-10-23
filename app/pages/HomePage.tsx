@@ -16,7 +16,8 @@ import crayonEffect1Src from "~/assets/images/crayon-effect-1.png";
 import crayonEffect2Src from "~/assets/images/crayon-effect-2.png";
 import cloudMascotSrc from "~/assets/images/cloud-mascot.png";
 import starMascotSrc from "~/assets/images/star-mascot.png";
-import styles from "./HomePage.module.css";
+
+import classes from "./HomePage.module.css";
 
 export type HomePageProps = PagePropsWithData<HomePageQuery>;
 
@@ -28,22 +29,23 @@ const HomePage: PageComponent<HomePageProps> = ({ data: { announcement } }) => {
     lh: 1.3,
   };
   return (
-    <Stack gap={96} mt="md" mb={72} className={styles.root}>
+    <Stack gap={96} my="md" className={classes.root}>
       <Container size="sm" w="100%">
         {!!announcement && <Alert icon={<BellIcon />}>{announcement}</Alert>}
       </Container>
       <Container w="100%">
-        <Group justify="space-between" gap={40}>
-          <Stack gap="lg">
-            <Box>
-              <Text size="xl" c="gray.6" fw={600} fz={36} lh={1}>
+        <Group justify="center" gap={40}>
+          <Stack gap="lg" style={{ flexGrow: 1 }}>
+            <Box style={{ textAlign: "center" }}>
+              <Text size="xl" c="gray.7" fw={600} fz={36} lh={1}>
                 Welcome to
               </Text>
               <Title fz={72} lh={1.3}>
                 Atelier
               </Title>
             </Box>
-            <Stack gap={8}>
+            <Divider w="100%" maw={440} style={{ alignSelf: "center" }} />
+            <Stack gap={8} w="100%" maw={440} style={{ alignSelf: "center" }}>
               <Button
                 component="a"
                 href="https://lu.ma/atelier.ubc"
@@ -52,6 +54,11 @@ const HomePage: PageComponent<HomePageProps> = ({ data: { announcement } }) => {
                 size="xl"
                 h="unset"
                 py="md"
+                styles={{
+                  inner: {
+                    alignItems: "start",
+                  },
+                }}
               >
                 <Stack gap={4}>
                   <Text span inherit fz={28}>
@@ -67,14 +74,14 @@ const HomePage: PageComponent<HomePageProps> = ({ data: { announcement } }) => {
                 href="https://instagram.com/atelier.ubc"
                 target="_blank"
                 rel="noopener noreferrer"
-                color="gray"
                 leftSection={<InstagramIcon />}
+                color="secondary"
               >
                 Give us a follow on insta
               </Button>
             </Stack>
           </Stack>
-          <Stack gap="xs" maw={540}>
+          <Stack gap="xs" maw={540} miw={340}>
             <Image src={heroSrc} alt="hero" />
             <Text lh={1.3}>
               at·el·ier: a workshop or studio, especially one used by an artist
@@ -122,7 +129,7 @@ const HomePage: PageComponent<HomePageProps> = ({ data: { announcement } }) => {
             <Image src={crayonEffect1Src} w={440} />
           </Center>
           <Banner
-            words={["NO SCHOOL ALLOWED"]}
+            words={["NO SCHOOLWORK ALLOWED"]}
             color="#2B6ECE"
             c="#D6FFBD"
             w="100vw"
@@ -288,8 +295,21 @@ const HomePage: PageComponent<HomePageProps> = ({ data: { announcement } }) => {
               !
             </Text>
           </Group>
+          <Button
+            component="a"
+            href="https://lu.ma/atelier.ubc"
+            target="_blank"
+            rel="noopener noreferrer"
+            size="xl"
+            w="100%"
+            maw={340}
+            style={{ alignSelf: "center" }}
+          >
+            join us :)
+          </Button>
         </Stack>
       </Container>
+      <Box />
     </Stack>
   );
 };
@@ -310,7 +330,7 @@ type BannerProps = Omit<BoxProps, "children"> & {
 const Banner: FC<BannerProps> = ({ words, color, style, ...otherProps }) => {
   const repeatedWords = useMemo(() => {
     const repeatedWords: string[] = [];
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 36; i++) {
       repeatedWords.push(words[i % words.length]!);
     }
     return repeatedWords.join(" • ");
