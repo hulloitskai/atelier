@@ -56,16 +56,16 @@ const BASE_THEME_OVERRIDE = createTheme({
       "#19488e",
     ],
     secondary: [
-      "#f4edff",
-      "#e4d9f6",
-      "#c5aeea",
-      "#a683df",
-      "#8a5dd5",
-      "#7946cf",
-      "#7139cd",
-      "#602cb6",
-      "#5526a3",
-      "#491f91",
+      "#faeffe",
+      "#eadef1",
+      "#d1bcde",
+      "#b897cb",
+      "#a179bb",
+      "#9465b1",
+      "#8e5aad",
+      "#7b4b98",
+      "#6e4189",
+      "#603779",
     ],
     accent: [
       "#ffecf2",
@@ -103,7 +103,7 @@ const BASE_THEME_OVERRIDE = createTheme({
     }),
     Alert: Alert.extend({
       defaultProps: {
-        radius: "xs",
+        radius: "md",
         // radius: "md",
       },
       styles: {
@@ -114,12 +114,13 @@ const BASE_THEME_OVERRIDE = createTheme({
     }),
     Badge: Badge.extend({
       defaultProps: {
-        radius: "xs",
+        radius: "md",
       },
     }),
     Button: Button.extend({
       defaultProps: {
-        radius: "xs",
+        variant: "outline",
+        radius: "md",
         // shadow: "sm",
       },
       classNames: {
@@ -129,7 +130,7 @@ const BASE_THEME_OVERRIDE = createTheme({
     }),
     Card: Card.extend({
       defaultProps: {
-        radius: "xs",
+        radius: "md",
         shadow: "sm",
         // radius: "md",
       },
@@ -148,7 +149,7 @@ const BASE_THEME_OVERRIDE = createTheme({
     }),
     Menu: Menu.extend({
       defaultProps: {
-        radius: "xs",
+        radius: "md",
         shadow: "sm",
         // radius: "md",
       },
@@ -163,25 +164,25 @@ const BASE_THEME_OVERRIDE = createTheme({
     }),
     NumberInput: NumberInput.extend({
       defaultProps: {
-        radius: "xs",
+        radius: "md",
         // radius: "md",
       },
     }),
     PasswordInput: PasswordInput.extend({
       defaultProps: {
-        radius: "xs",
+        radius: "md",
         // radius: "md",
       },
     }),
     Textarea: Textarea.extend({
       defaultProps: {
-        radius: "xs",
+        radius: "md",
         // radius: "md",
       },
     }),
     TextInput: TextInput.extend({
       defaultProps: {
-        radius: "xs",
+        radius: "md",
         // radius: "md",
       },
     }),

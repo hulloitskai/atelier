@@ -81,7 +81,7 @@ const UserSettingsPageProfileForm: FC<UserSettingsPageProfileFormProps> = ({
           required
           {...getInputProps("name")}
         />
-        <AvatarField label="Avatar" {...getInputProps("avatar")} />
+        <AvatarField label="Avatar" disabled {...getInputProps("avatar")} />
         <Button type="submit" disabled={!isDirty()} {...{ loading }}>
           Save
         </Button>
