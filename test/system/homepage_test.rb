@@ -6,6 +6,6 @@ require "application_system_test_case"
 class HomepageTest < ApplicationSystemTestCase
   test "renders" do
     visit(root_path)
-    assert_text("Atelier")
+    assert_text("atelier")
   end
 end
