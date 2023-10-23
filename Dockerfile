@@ -106,7 +106,7 @@ ENV BUNDLE_WITHOUT="development test" RAILS_ENV=production RAILS_LOG_TO_STDOUT=t
 COPY Gemfile Gemfile.lock package.json yarn.lock requirements.txt ./
 
 # Install dependencies
-RUN bundle install && yarn install && pip install -r requirements.txt
+RUN bundle install && yarn install
 
 # Copy application code
 COPY . ./
