@@ -3,7 +3,7 @@
 
 class QueryManager
   class ExecutionResult < T::Struct
-    # == Type Aliases
+    # == Aliases
     JSONObject = T.type_alias { T::Hash[String, T.untyped] }
 
     # == Properties

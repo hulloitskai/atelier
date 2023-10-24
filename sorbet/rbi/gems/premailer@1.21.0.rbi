@@ -271,10 +271,7 @@ module Premailer::Adapter::Nokogiri
   def load_html(input); end
 
   # Merge CSS into the HTML document.
-  #
-  # @return [String] an HTML.
-  #
-  # source://premailer//lib/premailer/adapter/nokogiri.rb#12
+  sig { returns(::String) }
   def to_inline_css; end
 
   # Converts the HTML document to a format suitable for plain-text e-mail.

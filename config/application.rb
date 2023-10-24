@@ -26,7 +26,7 @@ module Atelier
     require "inertia_rails_ext"
     require "bullet_ext"
     require "devise_ext"
-    require "premailer_ext"
+    # require "premailer_ext"
     require "graphql_ext"
     require "friendly_id_ext"
     require "email_validator_ext"

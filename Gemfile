@@ -132,6 +132,7 @@ gem "inertia_rails", "~> 3.1"
 
 # Use Premailer to inline CSS into email templates
 gem "premailer-rails", "~> 1.12"
+gem "css_parser"
 
 # Parse YAML files with Psych
 gem "psych", "~> 4.0"

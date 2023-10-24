@@ -186,8 +186,6 @@ end
 module Premailer::Rails::CSSLoaders::NetworkLoader
   extend ::Premailer::Rails::CSSLoaders::NetworkLoader
 
-  requires_ancestor { Kernel }
-
   # source://premailer-rails//lib/premailer/rails/css_loaders/network_loader.rb#32
   def asset_host(url); end
 
@@ -196,13 +194,10 @@ module Premailer::Rails::CSSLoaders::NetworkLoader
   # source://premailer-rails//lib/premailer/rails/css_loaders/network_loader.rb#27
   def asset_host_present?; end
 
-  sig { returns(::String) }
-  def base_url; end
-
   # source://premailer-rails//lib/premailer/rails/css_loaders/network_loader.rb#7
   def load(url); end
 
-  sig { params(url: ::String).returns(T.nilable(::URI::Generic)) }
+  # source://premailer-rails//lib/premailer/rails/css_loaders/network_loader.rb#12
   def uri_for_url(url); end
 end
 

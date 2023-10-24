@@ -77,8 +77,11 @@ module CssParser
     # --
     # TODO: declaration_hashes should be able to contain a RuleSet
     #       this should be a Class method
-    #
-    # source://css_parser//lib/css_parser.rb#55
+    sig do
+      params(
+        rule_sets: T.any(::CssParser::RuleSet, T::Array[::CssParser::RuleSet])
+      ).returns(::CssParser::RuleSet)
+    end
     def merge(*rule_sets); end
 
     # source://css_parser//lib/css_parser/regexps.rb#4
