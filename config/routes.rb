@@ -66,6 +66,7 @@ Rails.application.routes.draw do
   # == Pages
   root "home#show"
   get "/admin" => "admin#show"
+  get "/discord" => redirect("https://discord.gg/GwhpAuekw6")
   get "/insta" => redirect("https://instagram.com/atelier.ubc", status: 302)
   get "/src" => redirect("https://github.com/hulloitskai/atelier", status: 302)
 
